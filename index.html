@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Crud</title>
+</head>
+<body class="bg-dart">
+    <div class="container py-5">
+
+        <h1>
+            Student Mangment System
+        </h1>
+        <div class="form-group my-4">
+            <label for="name">Student Nama</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group my-4">
+            <label for="grade">Student Grade</label>
+            <input type="number" class="form-control" id="grade" placeholder="Enter the Grade" required>
+        </div>
+        <button id="add" class="btn btn-outline-primary"> Add </button>
+        <!-- sorting the grade list -->
+        <div class="mt-4">
+            <label class="block text-muted-foreground">Sort:</label>
+            <select class="border border-border rounded p-2 w-full" id="sortSelect" onchange="sortStudents()">
+              <option value="name">Name</option>
+              <option value="grades">Grade</option>
+            </select>
+          </div>
+          <div class="mt-4">
+            <label class="block text-muted-foreground">Filter:</label>
+            <select class="border border-border rounded p-2 w-full" id="filterSelect" onchange="filterStudents()">
+              <option value="all">All</option>
+              <option value="passed">Passed</option>
+              <option value="failed">Failed</option>
+            </select>
+          </div>
+         <!-- <button id="sort" class="btn btn-outline-primary">Grade</button> -->
+         
+         <table class="table  text-center my-5">
+            <!-- search -->
+             <input type="text" class="form-control my-5" placeholder="search width Student Name" id="search">
+            <thead>
+                <th>Student Nama</th>
+                <th> Student Grade</th>
+                <th> Delete</th>
+            </thead>
+            <tbody id="tbody">
+                <!-- Data will be populated here -->
+                 <!-- Example data -->
+                 <!-- <tr>
+                     <td>John Doe</td>
+                     <td>90</td>
+                     <td><button class="btn btn-danger">Delete</button></td>
+                 </tr>
+                 <tr>
+                     <td>Jane Doe</td>
+                     <td>85</td>
+                     <td><button class="btn btn-danger">Delete</button></td>
+                 </tr> -->
+
+                 <!-- Data will be populated dynamically -->
+
+
+            </tbody>
+         </table>
+
+
+    </div>
+
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
